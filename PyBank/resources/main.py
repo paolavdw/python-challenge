@@ -63,11 +63,11 @@ with open(output_file, "w", newline='') as datafile:
     writer.writerow(['Financial Analysis'])
     # Write the remaining rows
     writer.writerow(['_____________________'])
-    writer.writerow(['Total Months: 86'])
-    writer.writerow(['Total: $22564198'])
-    writer.writerow(['Average change: $-8311.11'])
-    writer.writerow(['Greatest Increase in Profits: Aug-16 ($1862002)'])
-    writer.writerow(['Greatest Decrease in Profits: Feb-14 ($-1825558)'])
+    writer.writerow([f'Total Months: {str(len(total_months))}'])
+    writer.writerow([f'Total: ${str(sum(P_L))}'])
+    writer.writerow([f'Average change: ${Changes_P_L: .2f}'])
+    writer.writerow([f'Greatest Increase in Profits: {str(list(total_months)[79])} (${Greatest_Increase})'])
+    writer.writerow([f'Greatest Decrease in Profits: {str(list(total_months)[49])} (${Greatest_Decrease})'])
 
 
  
